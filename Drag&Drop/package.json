@@ -1,11 +1,22 @@
 {
-  "name": "drag-and-drop",
-  "version": "1.0.0",
-  "description": "My drag&drop project",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Mihai Lascu",
-  "license": "ISC"
+	"name": "drag-and-drop",
+	"version": "1.0.0",
+	"description": "My drag&drop project",
+	"main": "index.ts",
+	"scripts": {
+		"build": "tsc && cd client && tsc",
+		"build:watch:server": "tsc -w",
+		"build:watch:client": "cd client && tsc -w",
+		"start": "nodemon ./dist/index.js"
+	},
+	"author": "Mihai Lascu",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.14",
+		"@types/node": "^18.11.6",
+		"nodemon": "^2.0.20"
+	}
 }
