@@ -1,5 +1,5 @@
 "use strict";
-// autobind decorator
+// autobind decorator --- not used, I prefer bind()
 function autobind(_target, _methodName, descriptor) {
     const originalMethod = descriptor.value;
     const adjDescriptor = {
@@ -36,6 +36,29 @@ function validate(validatableInput) {
     }
     return isValid;
 }
+// ProjectList Class
+class ProjectList {
+    constructor(type) {
+        this.type = type;
+        this.templateElement = document.getElementById('project-list');
+        this.hostElement = document.getElementById('app');
+        const importedNode = document.importNode(this.templateElement.content, true);
+        this.element = importedNode.firstElementChild;
+        this.element.id = `${this.type}-projects`;
+        this.attach();
+        this.renderContent();
+    }
+    renderContent() {
+        const listId = `${this.type}-projects-list`;
+        this.element.querySelector('ul').id = listId;
+        this.element.querySelector('h2').textContent =
+            this.type.toUpperCase() + ' PROJECTS';
+    }
+    attach() {
+        this.hostElement.insertAdjacentElement('beforeend', this.element);
+    }
+}
+// ProjectInput Class
 class ProjectInput {
     constructor() {
         this.templateElement = document.getElementById('project-input');
@@ -100,3 +123,5 @@ class ProjectInput {
     }
 }
 const projectInput = new ProjectInput();
+const activeProjList = new ProjectList('active');
+const finishedProjList = new ProjectList('finished');
