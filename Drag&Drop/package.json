@@ -9,6 +9,7 @@
 		"build:watch:client": "cd client && tsc -w",
 		"start": "nodemon ./dist/index.js"
 	},
+	"type": "module",
 	"author": "Mihai Lascu",
 	"license": "ISC",
 	"dependencies": {
