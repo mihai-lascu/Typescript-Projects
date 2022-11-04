@@ -1,12 +1,4 @@
-// validation
-export interface Validatable {
-	value: string | number;
-	required?: boolean;
-	minLength?: number;
-	maxLength?: number;
-	min?: number;
-	max?: number;
-}
+import { Validatable } from '../types/validation.types';
 
 export function validate(validatableInput: Validatable): boolean {
 	let isValid = true;
