@@ -110,7 +110,16 @@ class ProjectItem extends Component {
             return `${this.project.people} persons`;
         }
     }
-    configure() { }
+    dragStartHandler(event) {
+        console.log(event);
+    }
+    dragEndHandler(event) {
+        console.log(event);
+    }
+    configure() {
+        this.element.addEventListener('dragstart', this.dragStartHandler.bind(this));
+        this.element.addEventListener('dragend', this.dragEndHandler.bind(this));
+    }
     renderContent() {
         this.element.querySelector('p').textContent = this.project.description;
         this.element.querySelector('h2').textContent = this.project.title;
@@ -126,7 +135,21 @@ class ProjectList extends Component {
         this.configure();
         this.renderContent();
     }
+    dragOverHandler(_) {
+        const listEl = this.element.querySelector('ul');
+        listEl.classList.add('droppable');
+    }
+    dropHandler(event) {
+        console.log(event);
+    }
+    dragLeaveHandler(_) {
+        const listEl = this.element.querySelector('ul');
+        listEl.classList.remove('droppable');
+    }
     configure() {
+        this.element.addEventListener('dragover', this.dragOverHandler.bind(this));
+        this.element.addEventListener('dragleave', this.dragLeaveHandler.bind(this));
+        this.element.addEventListener('drop', this.dropHandler.bind(this));
         projectState.addListener((projects) => {
             const relevantProjects = projects.filter((proj) => {
                 if (this.type === 'active') {
