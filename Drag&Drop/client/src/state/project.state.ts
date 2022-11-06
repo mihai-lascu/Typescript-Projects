@@ -1,5 +1,5 @@
-import { Listener } from '../types/listener.types.js';
-import { Project, ProjectStatus } from '../types/project.types.js';
+import { Listener } from '../types/listener.types';
+import { Project, ProjectStatus } from '../types/project.types';
 
 export class State<T> {
 	protected listeners: Listener<T>[] = [];

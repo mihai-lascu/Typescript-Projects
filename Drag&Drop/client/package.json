@@ -1,0 +1,21 @@
+{
+	"name": "drag-and-drop-client",
+	"version": "1.0.0",
+	"description": "My drag&drop project",
+	"main": "index.ts",
+	"scripts": {
+		"build": "webpack",
+		"build:watch": "webpack --watch"
+	},
+	"author": "Mihai Lascu",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/express": "^4.17.14",
+		"@types/node": "^18.11.6",
+		"ts-loader": "^9.4.1",
+		"typescript": "^4.8.4",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.10.0",
+		"webpack-dev-server": "^4.11.1"
+	}
+}

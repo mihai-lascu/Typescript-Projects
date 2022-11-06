@@ -1,6 +1,6 @@
-import { Component } from '../types/component.types.js';
-import { Draggable } from '../types/drag-drop.types.js';
-import { Project } from '../types/project.types.js';
+import { Component } from '../types/component.types';
+import { Draggable } from '../types/drag-drop.types';
+import { Project } from '../types/project.types';
 
 export class ProjectItem
 	extends Component<HTMLUListElement, HTMLLIElement>

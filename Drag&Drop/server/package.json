@@ -1,12 +1,11 @@
 {
-	"name": "drag-and-drop",
+	"name": "drag-and-drop-server",
 	"version": "1.0.0",
 	"description": "My drag&drop project",
-	"main": "index.ts",
+	"main": "./src/index.ts",
 	"scripts": {
-		"build": "tsc && cd client && tsc",
-		"build:watch:server": "tsc -w",
-		"build:watch:client": "cd client && tsc -w",
+		"build": "tsc",
+		"build:watch": "tsc -w",
 		"start": "nodemon ./dist/index.js"
 	},
 	"type": "module",
