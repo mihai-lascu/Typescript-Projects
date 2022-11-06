@@ -4,7 +4,7 @@
 	"description": "My drag&drop project",
 	"main": "index.ts",
 	"scripts": {
-		"build:prod": "webpack --config webpack.config.prod.js",
+		"build": "webpack --config webpack.config.prod.js",
 		"build:dev": "webpack",
 		"build:watch": "webpack --watch"
 	},
