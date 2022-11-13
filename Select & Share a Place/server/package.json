@@ -1,0 +1,22 @@
+{
+	"name": "select-and-share-a-place-server",
+	"version": "1.0.0",
+	"description": "My Select & Share a Place project",
+	"main": "./src/index.ts",
+	"scripts": {
+		"build": "tsc",
+		"build:watch": "tsc -w",
+		"start": "nodemon ./dist/index.js"
+	},
+	"type": "module",
+	"author": "Mihai Lascu",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.14",
+		"@types/node": "^18.11.6",
+		"nodemon": "^2.0.20"
+	}
+}
