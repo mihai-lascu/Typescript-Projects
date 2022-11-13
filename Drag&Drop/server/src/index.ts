@@ -11,5 +11,5 @@ app.use('/', express.static(path.resolve(__dirname, '../../client/public')));
 app.use('/', express.static(path.resolve(__dirname, '../../client/dist')));
 
 app.listen(port, () => {
-	console.log(`Exaample app listening on port ${port}`);
+	console.log(`Drag & Drop app listening on port ${port}`);
 });
